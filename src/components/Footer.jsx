@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import { SOCIAL_MEDIA,REPO_LINK, RESUME_LINK, ABOUT_ME } from '../constants'
+import { SOCIAL_MEDIA, REPO_LINK, RESUME_LINK, ABOUT_ME } from '../constants'
 import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => (

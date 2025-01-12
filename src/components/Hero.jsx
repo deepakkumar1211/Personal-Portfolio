@@ -98,6 +98,7 @@
 
 import { motion } from 'framer-motion'
 import Lottie from "react-lottie";
+// import Lottie from "lottie-react";
 
 import { CONTENT, SOCIAL_MEDIA } from "../constants";
 import Button from './Button';

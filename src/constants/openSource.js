@@ -5,11 +5,11 @@ import openFoodFacts from '../assets/images/OpenSrc/openFoodFacts.png';
 
 import {
     SiFlutter,
-    SiPython,
+    SiPython, 
     SiReact,
     SiTypescript,
-    TbBrandReactNative
-} from "react-icons/all";
+} from "react-icons/si";
+import {TbBrandReactNative} from "react-icons/tb";
 
 export const OPEN_SOURCE_CONTRIBUTIONS = [
   {

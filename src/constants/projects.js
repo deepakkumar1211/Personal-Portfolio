@@ -7,9 +7,6 @@ import bookmark from "../assets/images/Projects/bookmark.jfif";
 import portfolio from '../assets/images/Projects/portfolio.jpg';
 
 import {
-    AiFillHtml5,
-    DiCss3,
-    MdScatterPlot,
     SiBootstrap,
     SiCss3,
     SiExpress,
@@ -27,7 +24,10 @@ import {
     SiScikitlearn,
     SiTailwindcss,
     SiVite
-} from "react-icons/all";
+} from "react-icons/si";
+import { AiFillHtml5 } from 'react-icons/ai';
+import { DiCss3 } from 'react-icons/di';
+import { MdScatterPlot } from 'react-icons/md';
 
 export const PROJECTS = [
   {

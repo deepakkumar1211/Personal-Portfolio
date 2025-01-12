@@ -3,10 +3,9 @@ import {
     AiFillInstagram,
     AiFillLinkedin,
     AiFillMail,
-    FaHackerrank,
-    SiCodechef,
-    SiLeetcode
-} from "react-icons/all";
+} from "react-icons/ai";
+import {FaHackerrank} from "react-icons/fa";
+import {SiCodechef, SiLeetcode } from "react-icons/si";
 
 export const SOCIAL_MEDIA = [
     {
@@ -35,12 +34,12 @@ export const SOCIAL_MEDIA = [
         link: "https://www.codechef.com/users/deepakkumar89",
     },
     {
-        id: "social-media-5",
+        id: "social-media-6",
         icon: FaHackerrank,
         link: "https://www.hackerrank.com/profile/sahudeepak1211",
     },
     {
-        id: "social-media-5",
+        id: "social-media-7",
         icon: SiLeetcode,
         link: "https://leetcode.com/u/sahudeepak1211/",
     },

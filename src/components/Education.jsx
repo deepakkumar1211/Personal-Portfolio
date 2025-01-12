@@ -1,6 +1,6 @@
-
 import { EDUCATION_LIST } from "../constants";
 import Lottie from "react-lottie";
+// import Lottie from "lottie-react";
 import animationData from "../assets/images/Education/login.json";
 import { motion } from "framer-motion";
 

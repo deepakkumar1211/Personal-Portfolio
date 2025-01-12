@@ -6,7 +6,7 @@ import {
     SiNodedotjs,
     SiReact,
     SiTailwindcss,
-} from "react-icons/all";
+} from "react-icons/si";
 
 
 export const EXPERIENCES = [
