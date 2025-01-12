@@ -14,7 +14,6 @@ import {
   SiReact,
   SiRedux,
   SiTailwindcss,
-  SiVisualstudiocode,
   SiVite,
   SiFirebase,
   SiTreehouse,
@@ -24,10 +23,11 @@ import {
   SiPostgresql,
   SiProbot,
   SiVercel,
-  SiGooglecloud
+  SiGooglecloud,
 } from "react-icons/si";
 import { AiFillGithub } from 'react-icons/ai';
 import { FaJava, FaNode } from 'react-icons/fa';
+import { DiVisualstudio } from "react-icons/di";
 
 export const SKILLS_LIST = [
   {
@@ -120,7 +120,7 @@ export const SKILLS_LIST = [
       },
       {
         id: "t-3",
-        icon: SiVisualstudiocode,
+        icon: DiVisualstudio,
         name: "VS Code",
       },
       {
