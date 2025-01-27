@@ -9,7 +9,8 @@ const Navbar = () => {
   const { navs } = CONTENT
 
   return (
-    <nav className="w-full z-10 flex justify-between items-center absolute left-0 top-0 bg-transparent">
+    <nav className="w-full z-10 flex justify-between items-center fixed left-0 top-0 bg-blue-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 sm:px-12"
+    >
       {/* Logo */}
       <Logo />
 

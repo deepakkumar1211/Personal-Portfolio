@@ -137,7 +137,7 @@ export const PROJECTS = [
         name: "Sk-Learn"
       },
       {
-        id: "icon-4",
+        id: "icon-5",
         icon: MdScatterPlot,
         name: "Matplotlib"
       },
@@ -147,7 +147,7 @@ export const PROJECTS = [
       //   name: "Seaborn"
       // },
       {
-        id: "icon-4",
+        id: "icon-6",
         icon: SiJupyter,
         name: "Jupyter Notebook"
       },

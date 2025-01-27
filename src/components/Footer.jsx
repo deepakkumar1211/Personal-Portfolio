@@ -32,12 +32,12 @@ const Footer = () => (
         </div>
 
         <div className="grid grid-cols-2">
-          <a href={RESUME_LINK} target="_blank">
-            <Button styles="mt-10 mr-3" text="Resume" icon="AiFillGithub" />
+          <a href={RESUME_LINK} target="">
+            <Button styles="mt-10 mr-3 bg-primaryLinear font-medium" text="Resume" icon="AiFillGithub" />
           </a>
           <a href={REPO_LINK} target="_blank">
             <Button
-              styles="mt-10 inline-flex items-center justify-center"
+              styles="mt-10 inline-flex items-center justify-center bg-primaryLinear font-medium"
               text="Star"
               icon={AiFillGithub}
             />

@@ -20,7 +20,9 @@ module.exports = {
       backgroundImage: {
         secondaryLinear: "linear-gradient(360deg, #43698f , #B6CCF5 200%)",
         primaryLinear: "linear-gradient(360deg, #D5E3F1, #B6CCF5)",
-        letsConnect: "linear-gradient(170deg , #B6BBF0 , #B6CCF5 60%)",
+        // letsConnect: "linear-gradient(170deg , #B6BBF0 , #B6CCF5)",
+        letsConnect: "linear-gradient(120deg, #5c68e2, #6c9fc0)",
+        letsConnect2: "linear-gradient(130deg, #6c9fc0, #5c68e2)",
       },
       dropShadow: {
         primary: "-5px 35px 40px rgba(223, 229, 236, 0.9)",

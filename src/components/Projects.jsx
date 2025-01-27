@@ -74,7 +74,7 @@ const Project = (props) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-secondaryLinear sm:px-16 px-6 py-4" >
+    <section id="projects" className="bg-secondaryLinear sm:px-16 px-6 py-4 pt-14" >
       <motion.div
         whileInView={{ y: [-20, 0], opacity: [0, 1] }}
         transition={{ duration: 1, type: 'spring', stiffness:"120"}}

@@ -7,11 +7,15 @@ export { EDUCATION_LIST } from './education';
 export { PROJECTS } from './projects';
 export { OPEN_SOURCE_CONTRIBUTIONS } from './openSource';
 
-export const RESUME_LINK = "";
+export const RESUME_LINK = "#resume";
 export const REPO_LINK = "https://github.com/deepakkumar1211/Portfolio";
 
 export const CONTENT = {
     navs: [
+        {
+            link: "#home",
+            title: "Home",
+        },
         {
             link: "#skills",
             title: "Skills",
@@ -27,6 +31,10 @@ export const CONTENT = {
         {
             link: "#experience",
             title: "Experience",
+        },
+        {
+            link: "#resume",
+            title: "Resume",
         },
         // {
         //     link: "#openSrc",

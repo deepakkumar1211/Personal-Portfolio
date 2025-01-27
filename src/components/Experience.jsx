@@ -105,7 +105,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
     return (
-        <div id="experience" className="sm:mb-0 sm:px-16 px-6 py-4">
+        <div id="experience" className="sm:mb-0 sm:px-16 px-6 py-4 pt-14">
             <motion.h1
                 whileInView={{ y: [-20, 0], opacity: [0, 1] }}
                 transition={{ duration: 1, type: 'spring', stiffness: "120" }}

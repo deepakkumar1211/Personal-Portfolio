@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 const Projects = lazy(() => import("./components/Projects"));
 const OpenSource = lazy(() => import("./components/OpenSource"));
 import Experience from "./components/Experience";
+import Resume from "./components/Resume.jsx";
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
           <Experience />
         </div>
         {/* <OpenSource /> */}
+        <Resume />
         <Footer />
       </div>
     </Suspense>

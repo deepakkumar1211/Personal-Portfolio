@@ -23,7 +23,6 @@ const FeatureCard = (props) => {
     <div
       className={`w-[64px] h-[64px] rounded-full items-center justify-center`}
     >
-      {/* <img src="" alt="National Institute Of Technology, Karnataka@seekpng.com" className="bg-blue"></img> */}
       <img src={icon} alt="icon" className="w-[80%] h-[80%] ml-8 sm:ml-auto object-contain" />
     </div>
     <div className="flex-1 flex flex-col ml-4">
@@ -48,7 +47,7 @@ const FeatureCard = (props) => {
 
 const Education = () => {
   return (
-    <section id="education" className="bg-primaryLinear pt-4 md:pb-10">
+    <section id="education" className="bg-primaryLinear pt-14 md:pb-10">
       <motion.h1
         whileInView={{ y: [-20, 0], opacity: [0, 1] }}
         transition={{ duration: 1, type: 'spring', stiffness: "120" }} className="flex-1 font-Poppins font-semibold ss:text-[55px] sm:text-[45px] sm:px-16 px-5 ss:leading-[80px] leading-[80px]">
