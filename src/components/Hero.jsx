@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import Lottie from "react-lottie";
-import { FaLinkedin } from 'react-icons/fa';
-// import Lottie from "lottie-react";
 
 import { CONTENT, SOCIAL_MEDIA, RESUME_LINK } from "../constants";
 import Button from './Button';

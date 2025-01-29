@@ -109,7 +109,7 @@ const Experience = () => {
             <motion.h1
                 whileInView={{ y: [-20, 0], opacity: [0, 1] }}
                 transition={{ duration: 1, type: 'spring', stiffness: "120" }}
-                className="flex-1 font-Poppins font-semibold ss:text-[55px] sm:text-[45px] ss:leading-[80px] leading-[80px] text-white">
+                className="flex-1 font-Poppins font-semibold ss:text-[55px] text-[35px] sm:text-[45px] ss:leading-[80px] leading-[80px] text-white text-center">
                 Experience
             </motion.h1>
 
