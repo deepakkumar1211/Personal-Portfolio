@@ -40,9 +40,9 @@ const Navbar = () => {
         />
 
         <div
-          className={`${toggle ? "opacity-1" : "opacity-0"} p-4 bg-dark_primary
+          className={`${toggle ? "opacity-1 block" : "opacity-0 hidden" } p-4 bg-dark_primary
         absolute top-20 right-0 mx-4 my-0
-        min-w-[140px] rounded-xl sidebar duration-800 transition-all ease-out`}
+        min-w-[140px] rounded-xl sidebar duration-800 transition-all ease-out `}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navs.map((nav, index) => (

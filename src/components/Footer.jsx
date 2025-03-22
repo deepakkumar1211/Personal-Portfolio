@@ -47,7 +47,7 @@ const Footer = () => (
 
       <div className="mt-10 md:mt-0">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E03AQH1S8t8C9dGmA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722158898496?e=1741824000&v=beta&t=gpwj7j6D0-0mbKdwBXfUkfshg_vnTMxSwKWFWi7gguo"
+          src="/assets/resume/Footer_Profile_Image.jpeg"
           alt="Deepak Kumar Sahu"
           className="w-[200px] h-[200px] border-2 border-dark_primary relative z-[5] rounded-full"
         />
