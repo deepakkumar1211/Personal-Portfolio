@@ -1,36 +1,116 @@
+// import { CONTENT } from "../constants";
+// import { useState } from "react";
+// import close from '../assets/images/close.svg'
+// import menu from '../assets/images/menu.svg'
+// import Logo from "../components/Logo";
+
+// const Navbar = () => {
+//   const [toggle, setToggle] = useState(false);
+//   const { navs } = CONTENT
+
+//   return (
+//     <nav className="w-full z-10 flex justify-between items-center fixed left-0 top-0 bg-blue-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 sm:px-12"
+//     >
+//       {/* Logo */}
+//       <Logo />
+
+//       {/* List of links */}
+//       <ul className="list-none md:flex hidden justify-end items-center flex-1">
+//         {navs.map((nav, index) => (
+//           <li
+//             key={nav.link}
+//             className={`font-poppins
+//             font-semibold
+//             cursor-pointer
+//             text-[16px]
+//             hover:text-[#5b86cd] sm:mr-6 text-dark_primary`}
+//           >
+//             <a key={nav.link+index} href={`${nav.link}`}>{nav.title}</a>
+//           </li>
+//         ))}
+//       </ul>
+
+//       {/* only for mobile devices*/}
+//       <div className="md:hidden flex flex-1 justify-end items-center">
+//         <img
+//           src={toggle ? close : menu}
+//           alt="menu"
+//           className="w-[28px] h-[28px] object-contain mr-4 cursor-pointer"
+//           onClick={() => setToggle((prev) => !prev)}
+//         />
+
+//         <div
+//           className={`${toggle ? "opacity-1 block" : "opacity-0 hidden" } p-4 bg-dark_primary
+//         absolute top-20 right-0 mx-4 my-0
+//         min-w-[140px] rounded-xl sidebar duration-800 transition-all ease-out `}
+//         >
+//           <ul className="list-none flex flex-col justify-end items-center flex-1">
+//             {navs.map((nav, index) => (
+//               <li
+//                 key={`${nav.link} mobile`}
+//                 className={`font-poppins
+//                 font-normal
+//                 cursor-pointer
+//                 text-[16px]
+//                 text-center
+//                 ${index === navs.length - 1 ? "mb-0" : "mb-4"}
+//                 text-white w-full`}
+//                 onClick={()=>setToggle(!toggle)}
+//               >
+//                 <a key={`${nav.link} ${index} mobile`} href={`${nav.link}`}>{nav.title}</a>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+
+
+
+
 import { CONTENT } from "../constants";
 import { useState } from "react";
-import close from '../assets/images/close.svg'
-import menu from '../assets/images/menu.svg'
+import close from "../assets/images/close.svg";
+import menu from "../assets/images/menu.svg";
 import Logo from "../components/Logo";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const { navs } = CONTENT
+  const [active, setActive] = useState(""); // track which nav is active
+  const { navs } = CONTENT;
 
   return (
-    <nav className="w-full z-10 flex justify-between items-center fixed left-0 top-0 bg-blue-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 sm:px-12"
-    >
+    <nav className="w-full z-10 flex justify-between items-center fixed left-0 top-0 bg-blue-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 sm:px-12">
       {/* Logo */}
       <Logo />
 
-      {/* List of links */}
+      {/* Desktop Menu */}
       <ul className="list-none md:flex hidden justify-end items-center flex-1">
         {navs.map((nav, index) => (
           <li
             key={nav.link}
-            className={`font-poppins
-            font-semibold
-            cursor-pointer
-            text-[16px]
-            hover:text-[#5b86cd] sm:mr-6 text-dark_primary`}
+            onClick={() => setActive(nav.title)}
+            className={`font-poppins font-semibold cursor-pointer text-[16px] sm:mr-6 relative group
+              ${active === nav.title ? "text-[#ffffff]" : "text-dark_primary hover:text-[#ffffff]"}
+              transition-colors duration-300`}
           >
-            <a key={nav.link+index} href={`${nav.link}`}>{nav.title}</a>
+            <a href={nav.link}>{nav.title}</a>
+            {/* Underline animation */}
+            <span
+              className={`absolute left-0 -bottom-[2px] h-[2px] rounded transition-all duration-300
+                ${active === nav.title ? "w-full bg-[#ffffff]" : "w-0 bg-[#ffffff] group-hover:w-full"}
+              `}
+            ></span>
           </li>
         ))}
       </ul>
 
-      {/* only for mobile devices*/}
+      {/* Mobile Menu */}
       <div className="md:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
@@ -40,24 +120,30 @@ const Navbar = () => {
         />
 
         <div
-          className={`${toggle ? "opacity-1 block" : "opacity-0 hidden" } p-4 bg-dark_primary
-        absolute top-20 right-0 mx-4 my-0
-        min-w-[140px] rounded-xl sidebar duration-800 transition-all ease-out `}
+          className={`${
+            toggle ? "opacity-1 block" : "opacity-0 hidden"
+          } p-4 bg-dark_primary absolute top-20 right-0 mx-4 my-0 min-w-[140px] rounded-xl sidebar duration-800 transition-all ease-out`}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navs.map((nav, index) => (
               <li
-                key={`${nav.link} mobile`}
-                className={`font-poppins
-                font-normal
-                cursor-pointer
-                text-[16px]
-                text-center
-                ${index === navs.length - 1 ? "mb-0" : "mb-4"}
-                text-white w-full`}
-                onClick={()=>setToggle(!toggle)}
+                key={`${nav.link}-mobile`}
+                onClick={() => {
+                  setActive(nav.title);
+                  setToggle(false);
+                }}
+                className={`font-poppins font-normal cursor-pointer text-[16px] text-center ${
+                  index === navs.length - 1 ? "mb-0" : "mb-4"
+                } w-full relative group transition-colors duration-300
+                ${active === nav.title ? "text-[#5b86cd]" : "text-white hover:text-[#5b86cd]"}`}
               >
-                <a key={`${nav.link} ${index} mobile`} href={`${nav.link}`}>{nav.title}</a>
+                <a href={nav.link}>{nav.title}</a>
+                {/* Underline animation for mobile */}
+                <span
+                  className={`absolute left-0 bottom-0 h-[2px] rounded transition-all duration-300
+                    ${active === nav.title ? "w-full bg-[#5b86cd]" : "w-0 bg-[#5b86cd] group-hover:w-full"}
+                  `}
+                ></span>
               </li>
             ))}
           </ul>
