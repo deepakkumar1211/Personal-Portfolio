@@ -22,6 +22,5 @@
 - [React js](https://reactjs.org/docs/getting-started.html)
  
  ## Additional info
- - Yes you can use this repo for your portfolio as template.
  - Any type of contributions are welcome.
 =======
